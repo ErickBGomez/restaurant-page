@@ -7,7 +7,7 @@ content.id = "content";
 // Header
 const headerContainer = document.createElement("header");
 const headerLogo = document.createElement("div");
-headerLogo.classList.add("logo-header");
+headerLogo.classList.add("logo");
 headerLogo.textContent = "Logo";
 
 headerContainer.appendChild(headerLogo);

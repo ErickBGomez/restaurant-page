@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=K2D:wght@300;600;700&family=Kaushan+Script&family=Urbanist:wght@400;500;800&display=swap");
+
 :root {
   /* Colors */
   --primary: #fb4c4c;
@@ -21,4 +23,64 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Fonts */
+
+p,
+div {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "K2D", sans-serif;
+}
+
+h1,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.802rem;
+}
+
+h2 {
+  font-size: 1.602rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.424rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.266rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.logo {
+  font-family: "Kaushan Script", cursive;
 }
