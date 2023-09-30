@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --primary: #fb4c4c;
+  --secondary: #fe9696;
+  --tertiary: #9b1c1c;
+  --white: #f5f5f5;
+  --black: #25272c;
+  --black-75: #25272cc0;
+  --black-50: #25272c80;
+  --black-25: #25272c40;
+  --black-10: #25272c1a;
+  --black-5: #25272c0c;
+  --white-input: #f9f9f9;
+  --red-background: #ff5050;
+
+  /* Base font */
+  font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
