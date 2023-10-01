@@ -4,8 +4,8 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-    header: "./src/pages/header.js",
-    footer: "./src/pages/footer.js",
+    header: "./src/sections/header.js",
+    footer: "./src/sections/footer.js",
   },
   devtool: "inline-source-map",
   devServer: {
