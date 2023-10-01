@@ -10,11 +10,16 @@ headerLogo.textContent = "Logo";
 
 // Header: Tabs
 const tabs = document.createElement("div");
+tabs.classList.add("tabs");
 const homeTab = document.createElement("div");
+homeTab.classList.add("tab");
+homeTab.classList.add("selected");
 homeTab.textContent = "HOME";
 const menuTab = document.createElement("div");
+menuTab.classList.add("tab");
 menuTab.textContent = "MENU";
 const aboutTab = document.createElement("div");
+aboutTab.classList.add("tab");
 aboutTab.textContent = "ABOUT";
 
 tabs.appendChild(homeTab);

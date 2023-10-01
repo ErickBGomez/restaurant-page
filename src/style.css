@@ -83,8 +83,51 @@ h6 {
 
 .logo {
   font-family: "Kaushan Script", cursive;
+  font-size: 2.25rem;
+  color: var(--primary);
 }
 
 body {
   margin: 0;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* Header */
+header {
+  user-select: none;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  width: 104px;
+  border-bottom: 3px solid var(--white);
+  transition: 300ms;
+}
+
+.tab.selected,
+.tab:hover {
+  border-bottom: 3px solid var(--primary);
+  color: var(--primary);
+  transition: 300ms;
+}
+
+.tab:not(.selected) {
+  cursor: pointer;
 }
