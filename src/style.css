@@ -149,6 +149,16 @@ header {
   gap: 8px;
 }
 
+/* Content: Home */
+
+.hero-bg {
+  height: 924px;
+  background-image: url("./img/hero-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3);
+}
+
 /* Footer */
 footer {
   background-color: var(--black);
