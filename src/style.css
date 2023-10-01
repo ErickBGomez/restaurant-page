@@ -131,3 +131,9 @@ header {
 .tab:not(.selected) {
   cursor: pointer;
 }
+
+.user-and-cart {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
