@@ -82,9 +82,11 @@ h6 {
 }
 
 .logo {
+  flex: 1;
   font-family: "Kaushan Script", cursive;
   font-size: 2.25rem;
   color: var(--primary);
+  min-width: 84px;
 }
 
 body {
@@ -102,13 +104,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 32px;
+  gap: 32px;
 }
 
 .tabs {
+  flex: 2;
+  max-width: 440px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 64px;
 }
 
 .tab {
@@ -133,7 +137,10 @@ header {
 }
 
 .user-and-cart {
+  flex: 1;
   display: flex;
+  max-width: 211px;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 8px;
 }
