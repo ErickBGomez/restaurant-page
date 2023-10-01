@@ -77,9 +77,9 @@ policiesContainer.classList.add("footer-info");
 const policiesTitle = document.createElement("h4");
 policiesTitle.textContent = "POLICIES";
 
-const policiesText1 = document.createElement("div");
+const policiesText1 = document.createElement("p");
 policiesText1.textContent = "Terms Of Use";
-const policiesText2 = document.createElement("div");
+const policiesText2 = document.createElement("p");
 policiesText2.textContent = "Privacy Policy";
 
 policiesContainer.appendChild(policiesTitle);
@@ -120,10 +120,10 @@ contactContainer.classList.add("footer-info");
 const contactTitle = document.createElement("h4");
 contactTitle.textContent = "CONTACT";
 
-const contactText1 = document.createElement("div");
+const contactText1 = document.createElement("p");
 contactText1.textContent =
   "Metrocentro, Calle Los Sisimiles, San Salvador, El Salvador";
-const contactText2 = document.createElement("div");
+const contactText2 = document.createElement("p");
 contactText2.textContent = "+503 2222-2222";
 
 contactContainer.appendChild(contactTitle);
@@ -136,7 +136,27 @@ footerInfoContainter.appendChild(contactContainer);
 
 footerUpper.appendChild(footerLogo);
 footerUpper.appendChild(footerInfoContainter);
+
+const footerLower = document.createElement("div");
+footerLower.classList.add("footer-lower");
+
+const copyright = document.createElement("p");
+copyright.textContent = "Copyright © 2023. All Rights Reserved";
+
+const authorFooter = document.createElement("p");
+authorFooter.textContent = "Made by ";
+const authorLink = document.createElement("a");
+authorLink.textContent = "Erick B. Gómez";
+authorLink.href = "https://github.com/ErickBGomez";
+authorLink.target = "_blank";
+
+authorFooter.appendChild(authorLink);
+
+footerLower.appendChild(copyright);
+footerLower.appendChild(authorFooter);
+
 footer.appendChild(footerUpper);
+footer.appendChild(footerLower);
 
 // Append containers to body
 document.body.appendChild(header);

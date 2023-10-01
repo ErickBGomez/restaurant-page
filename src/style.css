@@ -95,6 +95,10 @@ body {
   color: var(--black);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 header {
   user-select: none;
@@ -179,9 +183,24 @@ footer {
 .footer-info a {
   display: block;
   color: var(--white);
-  text-decoration: none;
 }
 
 .footer-logo {
   color: var(--white);
+}
+
+.footer-lower {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--white);
+  box-sizing: content-box;
+}
+
+.footer-lower a {
+  color: var(--primary);
+}
+
+.footer-upper,
+.footer-lower {
+  padding: 32px 0;
 }
