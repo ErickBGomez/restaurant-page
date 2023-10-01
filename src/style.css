@@ -153,7 +153,7 @@ header {
 footer {
   background-color: var(--black);
   color: var(--white);
-  padding: 0 180px;
+  padding: 0 12.5vw;
 }
 
 .footer-upper {
