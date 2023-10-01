@@ -86,7 +86,7 @@ h6 {
   font-family: "Kaushan Script", cursive;
   font-size: 2.25rem;
   color: var(--primary);
-  min-width: 84px;
+  max-width: 211px;
 }
 
 body {
@@ -143,4 +143,30 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-socials a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-logo {
+  color: var(--white);
 }
