@@ -148,6 +148,7 @@ header {
   align-items: center;
   padding: 8px 0;
   width: 104px;
+  font-size: 1.2rem;
   border-bottom: 3px solid var(--white);
   transition: 300ms;
 }
@@ -170,6 +171,18 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+}
+
+/* Content */
+
+.section-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.section-titles h3 {
+  color: var(--black-75);
 }
 
 /* Content: Home */
@@ -233,16 +246,6 @@ header {
   gap: 80px;
 }
 
-.dish-summary-titles {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.dish-summary-titles h3 {
-  color: var(--black-75);
-}
-
 .dish-gallery-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 250px));
@@ -262,6 +265,28 @@ header {
 .dish-gallery-container > div:hover {
   filter: brightness(1.3);
   transition: 150ms;
+}
+
+.about-summary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  background-color: var(--black-5);
+}
+
+.about-summary-container .info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 48px;
+  max-width: 30vw;
+}
+
+.about-summary-image {
+  width: 400px;
+  aspect-ratio: 8/5;
+  background-color: var(--secondary);
 }
 
 /* Footer */
@@ -322,6 +347,7 @@ footer {
 /* Page Paddings */
 .features-container,
 .dish-summary-container,
+.about-summary-container,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
@@ -329,7 +355,8 @@ footer {
 
 /* Content padding */
 .features-container,
-.dish-summary-container {
+.dish-summary-container,
+.about-summary-container {
   padding-top: 80px;
   padding-bottom: 80px;
 }

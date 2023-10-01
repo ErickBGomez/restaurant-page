@@ -72,7 +72,7 @@ function createFeatures() {
     addFeature(
       feature2Svg,
       "Easy-to-use platform",
-      "Web page created using Webpack"
+      "Web page created using Webpack technologies"
     )
   );
   container.appendChild(
@@ -91,7 +91,7 @@ function createDishSummary() {
   container.className = "dish-summary-container";
 
   const titles = document.createElement("div");
-  titles.className = "dish-summary-titles";
+  titles.className = "section-titles";
 
   const title = document.createElement("h3");
   title.textContent = "Our menu";
@@ -120,6 +120,43 @@ function createDishSummary() {
   return container;
 }
 
+function createAboutSummary() {
+  const container = document.createElement("div");
+  container.className = "about-summary-container";
+
+  const infoSection = document.createElement("div");
+  infoSection.classList = "info";
+
+  const titles = document.createElement("div");
+  titles.classList = "section-titles";
+  const title = document.createElement("h3");
+  title.textContent = "About Us";
+  const subtitle = document.createElement("h1");
+  subtitle.textContent = "Know our passions";
+
+  titles.appendChild(title);
+  titles.appendChild(subtitle);
+
+  const description = document.createElement("p");
+  description.textContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum, velit et scelerisque vestibulum, nibh urna ultricies nisl, id tincidunt quam neque nec massa.";
+
+  const button = document.createElement("button");
+  button.textContent = "LEARN MORE";
+
+  infoSection.appendChild(titles);
+  infoSection.appendChild(description);
+  infoSection.appendChild(button);
+
+  const image = document.createElement("div");
+  image.classList = "about-summary-image";
+
+  container.appendChild(infoSection);
+  container.appendChild(image);
+
+  return container;
+}
+
 export default function renderHome() {
   const home = document.createElement("div");
   home.classList = "home";
@@ -127,6 +164,7 @@ export default function renderHome() {
   home.appendChild(createHero());
   home.appendChild(createFeatures());
   home.appendChild(createDishSummary());
+  home.appendChild(createAboutSummary());
 
   return home;
 }
