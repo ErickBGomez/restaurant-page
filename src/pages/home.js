@@ -157,6 +157,43 @@ function createAboutSummary() {
   return container;
 }
 
+function createNewsletter() {
+  const container = document.createElement("div");
+  container.classList = "newsletter-container";
+
+  const titles = document.createElement("div");
+  titles.classList = "section-titles";
+  const title = document.createElement("h3");
+  title.textContent = "Newsletter";
+  const subtitle = document.createElement("h1");
+  subtitle.textContent = "Never miss up our latest updates";
+
+  titles.appendChild(title);
+  titles.appendChild(subtitle);
+
+  const description = document.createElement("p");
+  description.textContent =
+    "Every Sunday receive notices of new dishes, promotions and live events!";
+
+  const inputContainer = document.createElement("div");
+  inputContainer.classList = "input-container";
+
+  const textInput = document.createElement("input");
+  textInput.type = "text";
+  textInput.placeholder = "Enter your email";
+  const buttonInput = document.createElement("button");
+  buttonInput.textContent = "SIGN IN";
+
+  inputContainer.appendChild(textInput);
+  inputContainer.appendChild(buttonInput);
+
+  container.appendChild(titles);
+  container.appendChild(description);
+  container.appendChild(inputContainer);
+
+  return container;
+}
+
 export default function renderHome() {
   const home = document.createElement("div");
   home.classList = "home";
@@ -165,6 +202,7 @@ export default function renderHome() {
   home.appendChild(createFeatures());
   home.appendChild(createDishSummary());
   home.appendChild(createAboutSummary());
+  home.appendChild(createNewsletter());
 
   return home;
 }
