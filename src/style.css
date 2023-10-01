@@ -30,6 +30,7 @@ div {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  margin: 0;
 }
 
 button,
@@ -44,6 +45,7 @@ h4,
 h5,
 h6 {
   font-family: "K2D", sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -81,4 +83,8 @@ h6 {
 
 .logo {
   font-family: "Kaushan Script", cursive;
+}
+
+body {
+  margin: 0;
 }
