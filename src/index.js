@@ -1,13 +1,8 @@
 import "./style.css";
-import renderHeader from "./pages/header.js";
-import renderFooter from "./pages/footer.js";
+import renderHeader from "./sections/header.js";
+import renderFooter from "./sections/footer.js";
+import renderContent from "./sections/content.js";
 
 renderHeader();
+renderContent();
 renderFooter();
-
-// Content
-const content = document.createElement("div");
-content.id = "content";
-
-// Append containers to body
-document.body.appendChild(content);
