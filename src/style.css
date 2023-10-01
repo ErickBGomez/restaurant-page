@@ -149,6 +149,7 @@ header {
 footer {
   background-color: var(--black);
   color: var(--white);
+  padding: 0 180px;
 }
 
 .footer-upper {
@@ -156,12 +157,26 @@ footer {
   justify-content: space-between;
 }
 
-.footer-info {
+.footer-info-container {
+  flex: 1;
+  max-width: 743px;
   display: flex;
   justify-content: space-between;
+  gap: 16px;
 }
 
-.footer-socials a {
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 220px;
+}
+
+.footer-info h4 {
+  margin-bottom: 8px;
+}
+
+.footer-info a {
   display: block;
   color: var(--white);
   text-decoration: none;

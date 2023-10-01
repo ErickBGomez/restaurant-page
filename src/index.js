@@ -70,10 +70,10 @@ footerLogo.classList.add("footer-logo");
 footerLogo.textContent = "Logo";
 
 const footerInfoContainter = document.createElement("div");
-footerInfoContainter.classList.add("footer-info");
+footerInfoContainter.classList.add("footer-info-container");
 
 const policiesContainer = document.createElement("div");
-policiesContainer.classList.add("footer-policies");
+policiesContainer.classList.add("footer-info");
 const policiesTitle = document.createElement("h4");
 policiesTitle.textContent = "POLICIES";
 
@@ -87,7 +87,7 @@ policiesContainer.appendChild(policiesText1);
 policiesContainer.appendChild(policiesText2);
 
 const socialsContainer = document.createElement("div");
-socialsContainer.classList.add("footer-socials");
+socialsContainer.classList.add("footer-info");
 const socialsTitle = document.createElement("h4");
 socialsTitle.textContent = "SOCIALS";
 
@@ -116,7 +116,7 @@ socialsContainer.appendChild(socialsText3);
 socialsContainer.appendChild(socialsText4);
 
 const contactContainer = document.createElement("div");
-contactContainer.classList.add("footer-contact");
+contactContainer.classList.add("footer-info");
 const contactTitle = document.createElement("h4");
 contactTitle.textContent = "CONTACT";
 
