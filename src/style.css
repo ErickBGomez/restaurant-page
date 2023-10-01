@@ -14,7 +14,7 @@
   --red-background: #ff52521f;
 
   /* Base font */
-  font-size: 20px;
+  font-size: 16px;
 }
 
 *,
@@ -207,7 +207,6 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: var(--red-background);
-  padding: 88px 0;
   gap: 16px;
 }
 
@@ -223,6 +222,46 @@ header {
 
 .feature h4 {
   color: var(--primary);
+}
+
+.dish-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 80px;
+}
+
+.dish-summary-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dish-summary-titles h3 {
+  color: var(--black-75);
+}
+
+.dish-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 250px));
+  grid-template-rows: repeat(3, min-content);
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dish-gallery-container > div {
+  background-color: var(--secondary);
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.dish-gallery-container > div:hover {
+  filter: brightness(1.3);
+  transition: 150ms;
 }
 
 /* Footer */
@@ -282,7 +321,15 @@ footer {
 
 /* Page Paddings */
 .features-container,
+.dish-summary-container,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
+}
+
+/* Content padding */
+.features-container,
+.dish-summary-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }

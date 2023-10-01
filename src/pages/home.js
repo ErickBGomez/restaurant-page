@@ -3,37 +3,37 @@ import feature2Svg from "../img/feature2.svg";
 import feature3Svg from "../img/feature3.svg";
 
 function createHero() {
-  const heroContainer = document.createElement("div");
-  heroContainer.className = "hero-container";
+  const container = document.createElement("div");
+  container.className = "hero-container";
 
-  const heroText = document.createElement("div");
-  heroText.className = "hero-text";
+  const titles = document.createElement("div");
+  titles.className = "hero-text";
 
-  const heroTitle = document.createElement("h4");
-  heroTitle.textContent = "Welcome to ";
-  const restaurantTitleSpan = document.createElement("span");
-  restaurantTitleSpan.className = "hero-restaurant";
-  restaurantTitleSpan.textContent = "TITLE RESTAURANT";
-  heroTitle.appendChild(restaurantTitleSpan);
+  const title = document.createElement("h4");
+  title.textContent = "Welcome to ";
+  const restaurantSpan = document.createElement("span");
+  restaurantSpan.className = "hero-restaurant";
+  restaurantSpan.textContent = "TITLE RESTAURANT";
+  title.appendChild(restaurantSpan);
 
-  const heroSubtitle = document.createElement("h1");
-  heroSubtitle.textContent = "Enjoy the best of ";
-  const countrySubtitleSpan = document.createElement("span");
-  countrySubtitleSpan.className = "hero-country";
-  countrySubtitleSpan.textContent = "El Salvador";
+  const subtitle = document.createElement("h1");
+  subtitle.textContent = "Enjoy the best of ";
+  const countrySpan = document.createElement("span");
+  countrySpan.className = "hero-country";
+  countrySpan.textContent = "El Salvador";
 
-  heroSubtitle.appendChild(countrySubtitleSpan);
+  subtitle.appendChild(countrySpan);
 
-  heroText.appendChild(heroTitle);
-  heroText.appendChild(heroSubtitle);
+  titles.appendChild(title);
+  titles.appendChild(subtitle);
 
-  const heroButton = document.createElement("button");
-  heroButton.textContent = "VIEW MENU";
+  const button = document.createElement("button");
+  button.textContent = "VIEW MENU";
 
-  heroContainer.appendChild(heroText);
-  heroContainer.append(heroButton);
+  container.appendChild(titles);
+  container.append(button);
 
-  return heroContainer;
+  return container;
 }
 
 // function to add features section
@@ -58,24 +58,24 @@ function addFeature(iconPath, title, description) {
 }
 
 function createFeatures() {
-  const featuresContainer = document.createElement("div");
-  featuresContainer.className = "features-container";
+  const container = document.createElement("div");
+  container.className = "features-container";
 
-  featuresContainer.appendChild(
+  container.appendChild(
     addFeature(
       feature1Svg,
       "Open everyday",
       "From 6:00 am to 10:00 pm the 7 days of the week"
     )
   );
-  featuresContainer.appendChild(
+  container.appendChild(
     addFeature(
       feature2Svg,
       "Easy-to-use platform",
       "Web page created using Webpack"
     )
   );
-  featuresContainer.appendChild(
+  container.appendChild(
     addFeature(
       feature3Svg,
       "Great ambience",
@@ -83,7 +83,41 @@ function createFeatures() {
     )
   );
 
-  return featuresContainer;
+  return container;
+}
+
+function createDishSummary() {
+  const container = document.createElement("div");
+  container.className = "dish-summary-container";
+
+  const titles = document.createElement("div");
+  titles.className = "dish-summary-titles";
+
+  const title = document.createElement("h3");
+  title.textContent = "Our menu";
+
+  const subtitle = document.createElement("h1");
+  subtitle.textContent = "Discover your new favorite dish";
+
+  titles.appendChild(title);
+  titles.appendChild(subtitle);
+
+  const gallery = document.createElement("div");
+  gallery.className = "dish-gallery-container";
+
+  for (let i = 0; i < 9; i++) {
+    const galleryElement = document.createElement("div");
+    gallery.appendChild(galleryElement);
+  }
+
+  const button = document.createElement("button");
+  button.textContent = "VIEW MORE";
+
+  container.appendChild(titles);
+  container.appendChild(gallery);
+  container.appendChild(button);
+
+  return container;
 }
 
 export default function renderHome() {
@@ -92,6 +126,7 @@ export default function renderHome() {
 
   home.appendChild(createHero());
   home.appendChild(createFeatures());
+  home.appendChild(createDishSummary());
 
   return home;
 }
