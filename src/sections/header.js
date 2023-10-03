@@ -33,7 +33,7 @@ function addHeaderTab(label) {
 
 function createHeaderTabs() {
   const tabs = document.createElement("div");
-  tabs.className = "tabs";
+  tabs.className = "header-tabs";
 
   tabs.appendChild(addHeaderTab("HOME"));
   tabs.appendChild(addHeaderTab("MENU"));

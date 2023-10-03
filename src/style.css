@@ -166,7 +166,7 @@ header {
   gap: 32px;
 }
 
-.tabs {
+.header-tabs {
   flex: 2;
   max-width: 440px;
   display: flex;
@@ -174,7 +174,7 @@ header {
   align-items: center;
 }
 
-.tab {
+.header-tabs .tab {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,14 +185,14 @@ header {
   transition: 300ms;
 }
 
-.tab.selected,
-.tab:hover {
+.header-tabs .tab.selected,
+.header-tabs .tab:hover {
   border-bottom: 3px solid var(--primary);
   color: var(--primary);
   transition: 300ms;
 }
 
-.tab:not(.selected) {
+.header-tabs .tab:not(.selected) {
   cursor: pointer;
 }
 
