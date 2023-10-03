@@ -403,6 +403,7 @@ header {
 .dish-card {
   border-radius: 16px;
   background-color: var(--white);
+  user-select: none;
 }
 
 .dish-card .dish-image {
@@ -412,13 +413,18 @@ header {
 }
 
 .dish-card .info {
+  display: grid;
   padding: 16px 24px;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 8px;
+  align-items: center;
 }
 
 .dish-card .title {
   font-weight: 600;
   font-family: K2D, monospace;
   font-size: 1.4rem;
+  grid-column: 1 / 3;
 }
 
 .dish-card .price {
@@ -428,6 +434,7 @@ header {
 
 .dish-card .add-cart {
   padding: 12px;
+  justify-self: end;
 }
 
 /* Menu content vertical padding */
