@@ -23,25 +23,21 @@ function createUserAndCart() {
   return userAndCart;
 }
 
-function createTabs() {
+function addHeaderTab(label) {
+  const tab = document.createElement("div");
+  tab.className = "tab";
+  tab.textContent = label;
+
+  return tab;
+}
+
+function createHeaderTabs() {
   const tabs = document.createElement("div");
   tabs.className = "tabs";
 
-  const homeTab = document.createElement("div");
-  homeTab.className = "tab selected";
-  homeTab.textContent = "HOME";
-
-  const menuTab = document.createElement("div");
-  menuTab.className = "tab";
-  menuTab.textContent = "MENU";
-
-  const aboutTab = document.createElement("div");
-  aboutTab.className = "tab";
-  aboutTab.textContent = "ABOUT";
-
-  tabs.appendChild(homeTab);
-  tabs.appendChild(menuTab);
-  tabs.appendChild(aboutTab);
+  tabs.appendChild(addHeaderTab("HOME"));
+  tabs.appendChild(addHeaderTab("MENU"));
+  tabs.appendChild(addHeaderTab("ABOUT"));
 
   return tabs;
 }
@@ -57,7 +53,7 @@ export default function renderHeader() {
   const header = document.createElement("header");
 
   header.appendChild(createLogo());
-  header.appendChild(createTabs());
+  header.appendChild(createHeaderTabs());
   header.appendChild(createUserAndCart());
 
   document.body.appendChild(header);
