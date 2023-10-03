@@ -345,23 +345,50 @@ header {
   flex: 1;
 }
 
-/* Content: Menu */
-
-#menu {
-  padding: 64px 0;
+/* Home content vertical padding */
+.features-container,
+.dish-summary-container,
+.newsletter-container,
+.about-summary-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
+/* Content: Menu */
 .menu-tabs {
   display: flex;
   gap: 16px;
 }
 
 .menu-tabs .tab {
+  font-size: 1.2rem;
+  color: var(--black-50);
   padding: 8px 32px;
   justify-content: flex-start;
   border-radius: 100px;
   border: 2px solid var(--black-50);
-  color: var(--black-50);
+  user-select: none;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.menu-tabs .tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transition: 100ms;
+}
+
+.menu-tabs .tab.selected {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 500;
+  transition: 100ms;
+}
+
+/* Menu content vertical padding */
+#menu {
+  padding: 64px 0;
 }
 
 /* Footer */
@@ -424,16 +451,8 @@ footer {
 .dish-summary-container,
 .about-summary-container,
 .newsletter-container,
+.menu-tabs,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
-}
-
-/* Content padding */
-.features-container,
-.dish-summary-container,
-.newsletter-container,
-.about-summary-container {
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
