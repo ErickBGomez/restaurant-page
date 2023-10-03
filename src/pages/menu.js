@@ -38,7 +38,7 @@ function createDishContainer() {
   dishGrid.className = "dish-grid";
 
   for (let i = 0; i < 6; i++) {
-    dishGrid.appendChild(addDishCard("Dish title", "$8.99"));
+    dishGrid.appendChild(addDishCard("Dish title", "$9.99"));
   }
 
   container.appendChild(dishGrid);

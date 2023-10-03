@@ -386,8 +386,53 @@ header {
   transition: 100ms;
 }
 
+.dish-container {
+  margin-top: 32px;
+  background-color: var(--black-10);
+}
+
+.dish-grid {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1128px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  justify-content: center;
+  gap: 32px;
+}
+
+.dish-card {
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+.dish-card .dish-image {
+  background-color: var(--secondary);
+  height: 200px;
+  border-radius: 16px 16px 0 0;
+}
+
+.dish-card .info {
+  padding: 16px 24px;
+}
+
+.dish-card .title {
+  font-weight: 600;
+  font-family: K2D, monospace;
+  font-size: 1.4rem;
+}
+
+.dish-card .price {
+  color: var(--black-75);
+  font-size: 1.3rem;
+}
+
+.dish-card .add-cart {
+  padding: 12px;
+}
+
 /* Menu content vertical padding */
-#menu {
+#menu,
+.dish-container {
   padding: 64px 0;
 }
 
@@ -452,6 +497,7 @@ footer {
 .about-summary-container,
 .newsletter-container,
 .menu-tabs,
+.dish-container,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
