@@ -196,7 +196,7 @@ function createNewsletter() {
 
 export default function renderHome() {
   const home = document.createElement("div");
-  home.classList = "home";
+  home.id = "home";
 
   home.appendChild(createHero());
   home.appendChild(createFeatures());
