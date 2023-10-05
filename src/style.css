@@ -449,6 +449,37 @@ header {
   padding: 32px 0;
 }
 
+/* Content: About */
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.about-us-container h3 {
+  color: var(--white);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 560px;
+}
+
+.about-us-image {
+  background-color: var(--white);
+  min-width: 406px;
+  aspect-ratio: 8/5;
+}
+
+/* About us vertical padding */
+.about-us-container {
+  padding: 176px 0;
+  gap: 64px;
+}
+
 /* Footer */
 footer {
   background-color: var(--black);
@@ -511,6 +542,7 @@ footer {
 .newsletter-container,
 .menu-tabs,
 .dish-container,
+.about-us-container,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
