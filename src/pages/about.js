@@ -1,3 +1,82 @@
+import contact1Svg from "../img/contact1.svg";
+import contact2Svg from "../img/contact2.svg";
+import contact3Svg from "../img/contact3.svg";
+import delivery1Svg from "../img/delivery1.svg";
+import delivery2Svg from "../img/delivery2.svg";
+
+function addContactInfo(icon, text) {
+  const info = document.createElement("div");
+  info.className = "contact-info";
+
+  const infoIcon = new Image();
+  infoIcon.src = icon;
+
+  const infoText = document.createElement("p");
+  infoText.textContent = text;
+
+  info.appendChild(infoIcon);
+  info.appendChild(infoText);
+
+  return info;
+}
+
+function createContact() {
+  const container = document.createElement("div");
+
+  const titles = document.createElement("div");
+  titles.className = "section-titles contact-title";
+
+  const title = document.createElement("h3");
+  title.textContent = "Contact";
+  const subtitle = document.createElement("h1");
+  subtitle.textContent = "Where you can find us";
+
+  titles.appendChild(title);
+  titles.appendChild(subtitle);
+
+  const infoContainer = document.createElement("div");
+  infoContainer.className = "contact-info-container";
+
+  infoContainer.appendChild(
+    addContactInfo(
+      contact1Svg,
+      "Metrocentro, Calle Los Sisimiles, San Salvador, El Salvador."
+    )
+  );
+  infoContainer.appendChild(addContactInfo(contact2Svg, "+503 2222-2222"));
+  infoContainer.appendChild(addContactInfo(contact3Svg, "6:00 am - 10:00 pm"));
+
+  const delivery = document.createElement("div");
+  delivery.classList = "delivery-container";
+
+  const deliveryText = document.createElement("p");
+  deliveryText.textContent = "Also available on:";
+
+  const deliveryIcons = document.createElement("div");
+  deliveryIcons.classList = "delivery-icons";
+
+  const deliveryIcon1 = new Image();
+  deliveryIcon1.src = delivery1Svg;
+  const deliveryIcon2 = new Image();
+  deliveryIcon2.src = delivery2Svg;
+
+  deliveryIcons.appendChild(deliveryIcon1);
+  deliveryIcons.appendChild(deliveryIcon2);
+
+  delivery.appendChild(deliveryText);
+  delivery.appendChild(deliveryIcons);
+
+  const map = document.createElement("div");
+  map.classList = "contact-map";
+
+  container.appendChild(titles);
+  container.appendChild(infoContainer);
+  container.appendChild(delivery);
+  container.appendChild(map);
+
+  return container;
+}
+
 function createHorizontalDivisor() {
   const divisor = document.createElement("div");
   divisor.className = "horizontal-divisor";
@@ -79,6 +158,7 @@ export default function renderAbout() {
   about.appendChild(createAboutUs());
   about.appendChild(createOurHistory());
   about.appendChild(createHorizontalDivisor());
+  about.appendChild(createContact());
 
   return about;
 }
