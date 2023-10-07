@@ -1,3 +1,10 @@
+function createHorizontalDivisor() {
+  const divisor = document.createElement("div");
+  divisor.className = "horizontal-divisor";
+
+  return divisor;
+}
+
 function createOurHistory() {
   const container = document.createElement("div");
   container.className = "our-history-container";
@@ -71,6 +78,7 @@ export default function renderAbout() {
 
   about.appendChild(createAboutUs());
   about.appendChild(createOurHistory());
+  about.appendChild(createHorizontalDivisor());
 
   return about;
 }

@@ -497,6 +497,33 @@ header {
   flex-direction: row-reverse;
 }
 
+.horizontal-divisor {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.horizontal-divisor::after,
+.horizontal-divisor::before {
+  content: " ";
+  position: absolute;
+  top: 3px;
+  width: 80px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--primary);
+}
+
+.horizontal-divisor::after {
+  left: 48px;
+}
+.horizontal-divisor::before {
+  right: 48px;
+}
+
 /* About us vertical padding */
 .about-us-container,
 .our-history-container {
