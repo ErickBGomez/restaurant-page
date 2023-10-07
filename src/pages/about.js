@@ -22,6 +22,7 @@ function addContactInfo(icon, text) {
 
 function createContact() {
   const container = document.createElement("div");
+  container.classList = "contact-container";
 
   const titles = document.createElement("div");
   titles.className = "section-titles contact-title";
@@ -33,6 +34,9 @@ function createContact() {
 
   titles.appendChild(title);
   titles.appendChild(subtitle);
+
+  const grid = document.createElement("div");
+  grid.classList = "contact-grid";
 
   const infoContainer = document.createElement("div");
   infoContainer.className = "contact-info-container";
@@ -69,10 +73,12 @@ function createContact() {
   const map = document.createElement("div");
   map.classList = "contact-map";
 
+  grid.appendChild(infoContainer);
+  grid.appendChild(delivery);
+  grid.appendChild(map);
+
   container.appendChild(titles);
-  container.appendChild(infoContainer);
-  container.appendChild(delivery);
-  container.appendChild(map);
+  container.appendChild(grid);
 
   return container;
 }
