@@ -455,29 +455,52 @@ header {
   justify-content: space-between;
   background-color: var(--black);
   color: var(--white);
+  gap: 64px;
 }
 
-.about-us-container h3 {
-  color: var(--white);
+.about-us-container,
+.our-history-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
 }
 
-.about-text {
+.about-us-image,
+.our-history-image {
+  width: 100%;
+  min-width: 200px;
+  max-width: 406px;
+  aspect-ratio: 8/5;
+}
+
+.about-us-image {
+  background-color: var(--white);
+}
+
+.our-history-image {
+  background-color: var(--secondary);
+}
+
+.about-text,
+.our-history-text {
   display: flex;
   flex-direction: column;
   gap: 32px;
   max-width: 560px;
 }
 
-.about-us-image {
-  background-color: var(--white);
-  min-width: 406px;
-  aspect-ratio: 8/5;
+.about-us-container h3 {
+  color: var(--white);
+}
+
+.our-history-container {
+  flex-direction: row-reverse;
 }
 
 /* About us vertical padding */
-.about-us-container {
+.about-us-container,
+.our-history-container {
   padding: 176px 0;
-  gap: 64px;
 }
 
 /* Footer */
@@ -543,6 +566,7 @@ footer {
 .menu-tabs,
 .dish-container,
 .about-us-container,
+.our-history-container,
 footer {
   padding-left: 12.5vw;
   padding-right: 12.5vw;
