@@ -6,9 +6,44 @@ export default function renderContent() {
   const content = document.createElement("div");
   content.id = "content";
 
-  // content.appendChild(renderHome());
-  // content.appendChild(renderMenu());
-  content.appendChild(renderAbout());
-
   document.body.appendChild(content);
+
+  changeContent("home");
+
+  tabsEvent();
+}
+
+function tabsEvent() {
+  const tabs = document.querySelectorAll(".tab");
+
+  for (const tab of tabs) {
+    tab.addEventListener("click", (e) =>
+      changeContent(e.target.dataset.contentTarget)
+    );
+  }
+}
+
+function changeContent(newContent) {
+  const content = document.querySelector("#content");
+  const tabs = document.querySelectorAll(".tab");
+  let callback;
+
+  content.innerHTML = "";
+
+  // Set content callback function depending of newContent value
+  if (newContent == "home") {
+    callback = renderHome;
+  } else if (newContent == "menu") {
+    callback = renderMenu;
+  } else if (newContent == "about") {
+    callback = renderAbout;
+  }
+
+  // Set active tab when invoking function
+  for (const tab of tabs) {
+    tab.classList.remove("active");
+    if (tab.dataset.contentTarget == newContent) tab.classList.add("active");
+  }
+
+  content.appendChild(callback());
 }

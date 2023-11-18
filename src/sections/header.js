@@ -27,6 +27,7 @@ function addHeaderTab(label) {
   const tab = document.createElement("div");
   tab.className = "tab";
   tab.textContent = label;
+  tab.dataset.contentTarget = label.toLowerCase();
 
   return tab;
 }
