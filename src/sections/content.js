@@ -41,8 +41,8 @@ function changeContent(newContent) {
 
   // Set active tab when invoking function
   for (const tab of tabs) {
-    tab.classList.remove("active");
-    if (tab.dataset.contentTarget == newContent) tab.classList.add("active");
+    tab.classList.remove("selected");
+    if (tab.dataset.contentTarget == newContent) tab.classList.add("selected");
   }
 
   content.appendChild(callback());
