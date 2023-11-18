@@ -231,7 +231,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--black-75);
-  height: 90vh;
+  height: 92vh;
   gap: 24px;
   color: var(--white);
 }
@@ -441,6 +441,10 @@ header {
 .dish-card .add-cart {
   padding: 12px;
   justify-self: end;
+}
+
+.dish-card.filtered {
+  display: none;
 }
 
 /* Menu content vertical padding */

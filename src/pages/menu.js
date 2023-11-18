@@ -1,6 +1,7 @@
-function addDishCard(title, price) {
+function addDishCard(title, category, price) {
   const card = document.createElement("div");
   card.className = "dish-card";
+  card.dataset.category = category;
 
   const image = document.createElement("div");
   image.className = "dish-image";
@@ -30,6 +31,20 @@ function addDishCard(title, price) {
   return card;
 }
 
+function filterMenu(dishGrid, filter = "all") {
+  filter = filter.toLowerCase();
+
+  if (filter !== "all") {
+    for (const dish of dishGrid.childNodes) {
+      dish.classList.add("filtered");
+
+      if (dish.dataset.category === filter) {
+        dish.classList.remove("filtered");
+      }
+    }
+  }
+}
+
 function createDishContainer() {
   const container = document.createElement("div");
   container.className = "dish-container";
@@ -37,9 +52,26 @@ function createDishContainer() {
   const dishGrid = document.createElement("div");
   dishGrid.className = "dish-grid";
 
-  for (let i = 0; i < 6; i++) {
-    dishGrid.appendChild(addDishCard("Dish title", "$9.99"));
-  }
+  // Replace this to selected menu tab
+  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
+
+  filterMenu(dishGrid, "breakfast");
 
   container.appendChild(dishGrid);
 
@@ -49,6 +81,7 @@ function createDishContainer() {
 function addMenuTab(tabLabel) {
   const tab = document.createElement("div");
   tab.className = "tab";
+  tab.dataset.tabCategory = tabLabel.toLowerCase();
   tab.textContent = tabLabel;
 
   return tab;
