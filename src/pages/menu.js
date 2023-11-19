@@ -74,8 +74,11 @@ function createDishContainer() {
   dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
+  dishGrid.appendChild(addDishCard("Coffee", "drinks", "$0.75"));
+  dishGrid.appendChild(addDishCard("Chocolate", "drinks", "$0.80"));
+  dishGrid.appendChild(addDishCard("Horchata", "drinks", "$1.00"));
+  dishGrid.appendChild(addDishCard("Cebada", "drinks", "$1.15"));
+  dishGrid.appendChild(addDishCard("Soda", "drinks", "$1.25"));
 
   container.appendChild(dishGrid);
 
