@@ -31,7 +31,9 @@ function addDishCard(title, category, price) {
   return card;
 }
 
-function filterMenu(dishGrid, filter = "all") {
+function filterMenu(menu, filter = "all") {
+  const dishGrid = menu.querySelector(".dish-grid");
+
   dishGrid.dataset.filter = filter.toLowerCase();
 
   if (filter !== "all") {
@@ -71,8 +73,6 @@ function createDishContainer() {
   dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
 
-  filterMenu(dishGrid, "breakfast");
-
   container.appendChild(dishGrid);
 
   return container;
@@ -107,6 +107,8 @@ export default function renderMenu() {
 
   menu.appendChild(createMenuTabs());
   menu.appendChild(createDishContainer());
+
+  filterMenu(menu, "breakfast");
 
   return menu;
 }
