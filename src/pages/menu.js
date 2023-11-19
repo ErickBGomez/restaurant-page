@@ -36,13 +36,11 @@ function filterMenu(menu, filter = "all") {
 
   dishGrid.dataset.filter = filter.toLowerCase();
 
-  if (filter !== "all") {
-    for (const dish of dishGrid.childNodes) {
-      dish.classList.add("hidden");
+  for (const dish of dishGrid.childNodes) {
+    dish.classList.add("hidden");
 
-      if (dish.dataset.category === dishGrid.dataset.filter) {
-        dish.classList.remove("hidden");
-      }
+    if (dish.dataset.category === dishGrid.dataset.filter) {
+      dish.classList.remove("hidden");
     }
   }
 }
@@ -59,6 +57,9 @@ function createDishContainer() {
   dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
@@ -66,10 +67,10 @@ function createDishContainer() {
   dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dessert", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
+  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "drinks", "$9.99"));
 
@@ -110,5 +111,17 @@ export default function renderMenu() {
 
   filterMenu(menu, "breakfast");
 
+  addMenuTabEvents(menu);
+
   return menu;
+}
+
+function addMenuTabEvents(menu) {
+  const menuTabs = menu.querySelectorAll(".menu-tabs .tab");
+
+  for (const tab of menuTabs) {
+    tab.addEventListener("click", (e) =>
+      filterMenu(menu, e.target.dataset.tabCategory)
+    );
+  }
 }

@@ -14,7 +14,7 @@ export default function renderContent() {
 }
 
 function tabsEvent() {
-  const tabs = document.querySelectorAll(".tab");
+  const tabs = document.querySelectorAll(".header-tabs .tab");
 
   for (const tab of tabs) {
     tab.addEventListener("click", (e) =>
