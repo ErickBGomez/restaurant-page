@@ -32,14 +32,14 @@ function addDishCard(title, category, price) {
 }
 
 function filterMenu(dishGrid, filter = "all") {
-  filter = filter.toLowerCase();
+  dishGrid.dataset.filter = filter.toLowerCase();
 
   if (filter !== "all") {
     for (const dish of dishGrid.childNodes) {
-      dish.classList.add("filtered");
+      dish.classList.add("hidden");
 
-      if (dish.dataset.category === filter) {
-        dish.classList.remove("filtered");
+      if (dish.dataset.category === dishGrid.dataset.filter) {
+        dish.classList.remove("hidden");
       }
     }
   }
