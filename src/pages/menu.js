@@ -37,10 +37,13 @@ function filterMenu(menu, filter = "all") {
   dishGrid.dataset.filter = filter.toLowerCase();
 
   for (const dish of dishGrid.childNodes) {
-    dish.classList.add("hidden");
+    dish.classList.remove("hidden");
 
-    if (dish.dataset.category === dishGrid.dataset.filter) {
-      dish.classList.remove("hidden");
+    if (
+      dish.dataset.category !== dishGrid.dataset.filter &&
+      dishGrid.dataset.filter !== "all"
+    ) {
+      dish.classList.add("hidden");
     }
   }
 }
@@ -109,7 +112,7 @@ export default function renderMenu() {
   menu.appendChild(createMenuTabs());
   menu.appendChild(createDishContainer());
 
-  filterMenu(menu, "breakfast");
+  filterMenu(menu);
 
   addMenuTabEvents(menu);
 
