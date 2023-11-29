@@ -56,25 +56,28 @@ function createDishContainer() {
   dishGrid.className = "dish-grid";
 
   // Replace this to selected menu tab
-  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "breakfast", "$9.99"));
+  dishGrid.appendChild(
+    addDishCard("Huevos con frijoles", "breakfast", "$9.99")
+  );
+  dishGrid.appendChild(
+    addDishCard("Platanos salcochados", "breakfast", "$4.30")
+  );
+  dishGrid.appendChild(addDishCard("Huevos rancheros", "breakfast", "$4.39"));
+  dishGrid.appendChild(addDishCard("Casamiento", "breakfast", "$6.59"));
+  dishGrid.appendChild(addDishCard("Sopa de pollo", "lunch", "$10.99"));
+  dishGrid.appendChild(addDishCard("Carne a la plancha", "lunch", "$12.50"));
+  dishGrid.appendChild(addDishCard("Lasaña", "lunch", "$8.50"));
+  dishGrid.appendChild(addDishCard("Lonja empanizada", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "dinner", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
-  dishGrid.appendChild(addDishCard("Dish title", "desserts", "$9.99"));
-  dishGrid.appendChild(addDishCard("Coffee", "drinks", "$0.75"));
+  dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60"));
+  dishGrid.appendChild(addDishCard("Riguas", "dinner", "$9.99"));
+  dishGrid.appendChild(addDishCard("Nuegados", "desserts", "$3.65"));
+  dishGrid.appendChild(addDishCard("Peperecha", "desserts", "$1.15"));
+  dishGrid.appendChild(addDishCard("Semita", "desserts", "$2.67"));
+  dishGrid.appendChild(addDishCard("Salpor", "desserts", "$1.98"));
+  dishGrid.appendChild(addDishCard("Viejitas", "desserts", "$1.10"));
+  dishGrid.appendChild(addDishCard("Café", "drinks", "$0.75"));
   dishGrid.appendChild(addDishCard("Chocolate", "drinks", "$0.80"));
   dishGrid.appendChild(addDishCard("Horchata", "drinks", "$1.00"));
   dishGrid.appendChild(addDishCard("Cebada", "drinks", "$1.15"));
