@@ -33,19 +33,29 @@ function addDishCard(title, category, price) {
 
 function filterMenu(menu, filter = "all") {
   const dishGrid = menu.querySelector(".dish-grid");
+  const dishes = dishGrid.querySelectorAll(".dish-card");
+  const menuTabs = menu.querySelectorAll(".menu-tabs .tab");
 
   dishGrid.dataset.filter = filter.toLowerCase();
 
-  for (const dish of dishGrid.childNodes) {
+  // Filter dishes
+  dishes.forEach((dish) => {
     dish.classList.remove("hidden");
 
     if (
       dish.dataset.category !== dishGrid.dataset.filter &&
       dishGrid.dataset.filter !== "all"
-    ) {
+    )
       dish.classList.add("hidden");
-    }
-  }
+  });
+
+  // Select tab
+  menuTabs.forEach((tab) => {
+    tab.classList.remove("selected");
+
+    if (tab.dataset.tabCategory == dishGrid.dataset.filter)
+      tab.classList.add("selected");
+  });
 }
 
 function createDishContainer() {
