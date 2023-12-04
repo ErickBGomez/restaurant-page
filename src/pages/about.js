@@ -1,8 +1,8 @@
-import contact1Svg from "../img/contact1.svg";
-import contact2Svg from "../img/contact2.svg";
-import contact3Svg from "../img/contact3.svg";
-import delivery1Svg from "../img/delivery1.svg";
-import delivery2Svg from "../img/delivery2.svg";
+import contact1Svg from "../img/about/contact1.svg";
+import contact2Svg from "../img/about/contact2.svg";
+import contact3Svg from "../img/about/contact3.svg";
+import delivery1Svg from "../img/about/delivery1.svg";
+import delivery2Svg from "../img/about/delivery2.svg";
 
 function addContactInfo(icon, text) {
   const info = document.createElement("div");
