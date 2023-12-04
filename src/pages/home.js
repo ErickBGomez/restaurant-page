@@ -1,6 +1,6 @@
-import feature1Svg from "../img/feature1.svg";
-import feature2Svg from "../img/feature2.svg";
-import feature3Svg from "../img/feature3.svg";
+import feature1Svg from "../img/home/feature1.svg";
+import feature2Svg from "../img/home/feature2.svg";
+import feature3Svg from "../img/home/feature3.svg";
 
 function createHero() {
   const container = document.createElement("div");

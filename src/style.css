@@ -231,7 +231,7 @@ header {
   justify-content: center;
   align-items: center;
   background: linear-gradient(#000000ad, #000000be),
-    url(img/hero-bg.jpeg) no-repeat;
+    url(img/home/hero-bg.jpeg) no-repeat;
   background-size: 100%;
   height: 92vh;
   gap: 24px;
