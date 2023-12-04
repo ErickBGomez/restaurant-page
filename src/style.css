@@ -324,9 +324,7 @@ header {
 }
 
 .about-summary-image {
-  width: 400px;
-  aspect-ratio: 8/5;
-  background-color: var(--secondary);
+  width: 350px;
 }
 
 .newsletter-container {
@@ -474,17 +472,8 @@ header {
 .about-us-image,
 .our-history-image {
   width: 100%;
-  min-width: 200px;
-  max-width: 406px;
-  aspect-ratio: 8/5;
-}
-
-.about-us-image {
-  background-color: var(--white);
-}
-
-.our-history-image {
-  background-color: var(--secondary);
+  min-width: 280px;
+  max-width: 350px;
 }
 
 .about-text,

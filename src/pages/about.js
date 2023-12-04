@@ -3,6 +3,8 @@ import contact2Svg from "../img/about/contact2.svg";
 import contact3Svg from "../img/about/contact3.svg";
 import delivery1Svg from "../img/about/delivery1.svg";
 import delivery2Svg from "../img/about/delivery2.svg";
+import aboutUsPng from "../img/about/about-us.png";
+import ourHistoryPng from "../img/about/our-history.png";
 
 function addContactInfo(icon, text) {
   const info = document.createElement("div");
@@ -115,7 +117,8 @@ function createOurHistory() {
   text.appendChild(titles);
   text.appendChild(description);
 
-  const image = document.createElement("div");
+  const image = new Image();
+  image.src = ourHistoryPng;
   image.classList = "our-history-image";
 
   container.appendChild(text);
@@ -149,7 +152,8 @@ function createAboutUs() {
   text.appendChild(titles);
   text.appendChild(description);
 
-  const image = document.createElement("div");
+  const image = new Image();
+  image.src = aboutUsPng;
   image.className = "about-us-image";
 
   container.appendChild(text);

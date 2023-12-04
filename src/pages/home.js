@@ -1,6 +1,7 @@
 import feature1Svg from "../img/home/feature1.svg";
 import feature2Svg from "../img/home/feature2.svg";
 import feature3Svg from "../img/home/feature3.svg";
+import aboutUsSummaryPng from "../img/home/about-us-summary.png";
 
 function createHero() {
   const container = document.createElement("div");
@@ -148,7 +149,8 @@ function createAboutSummary() {
   infoSection.appendChild(description);
   infoSection.appendChild(button);
 
-  const image = document.createElement("div");
+  const image = new Image();
+  image.src = aboutUsSummaryPng;
   image.classList = "about-summary-image";
 
   container.appendChild(infoSection);
