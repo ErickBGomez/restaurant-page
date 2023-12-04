@@ -465,6 +465,7 @@ header {
 .about-us-container,
 .our-history-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 64px;
 }
@@ -575,7 +576,7 @@ header {
 .about-us-container,
 .our-history-container,
 .contact-container {
-  padding: 176px 0;
+  padding: 130px 0;
 }
 
 /* Footer */
