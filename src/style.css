@@ -230,7 +230,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--black-75);
+  background: linear-gradient(#000000ad, #000000be),
+    url(img/hero-bg.jpeg) no-repeat;
+  background-size: 100%;
   height: 92vh;
   gap: 24px;
   color: var(--white);
