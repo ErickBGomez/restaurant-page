@@ -13,6 +13,8 @@ import riguasImg from "../img/menu/riguas.jpg";
 import nuegadosImg from "../img/menu/nuegados.jpg";
 import peperechasImg from "../img/menu/peperechas.jpg";
 import semitaImg from "../img/menu/semita.jpg";
+import salporesImg from "../img/menu/salpores.jpg";
+import viejitasImg from "../img/menu/viejitas.jpg";
 
 function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
@@ -125,8 +127,12 @@ function createDishContainer() {
     addDishCard("Peperecha", "desserts", "$1.15", peperechasImg)
   );
   dishGrid.appendChild(addDishCard("Semita", "desserts", "$2.67", semitaImg));
-  dishGrid.appendChild(addDishCard("Salpores", "desserts", "$1.98"));
-  dishGrid.appendChild(addDishCard("Viejitas", "desserts", "$1.10"));
+  dishGrid.appendChild(
+    addDishCard("Salpores", "desserts", "$1.98", salporesImg)
+  );
+  dishGrid.appendChild(
+    addDishCard("Viejitas", "desserts", "$1.10", viejitasImg)
+  );
   dishGrid.appendChild(addDishCard("Café", "drinks", "$0.75"));
   dishGrid.appendChild(addDishCard("Chocolate", "drinks", "$0.80"));
   dishGrid.appendChild(addDishCard("Horchata", "drinks", "$1.00"));
