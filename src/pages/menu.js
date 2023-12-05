@@ -7,7 +7,12 @@ import carneALaPlanchaImg from "../img/menu/carne-a-la-plancha.jpg";
 import lasagnaImg from "../img/menu/lasagna.jpg";
 import lonjaEmpanizadaImg from "../img/menu/lonja-empanizada.jpg";
 import hamburguesaImg from "../img/menu/hamburguesa.jpg";
-import pescadoAlAjillo from "../img/menu/pescado-al-ajillo.jpg";
+import pescadoAlAjilloImg from "../img/menu/pescado-al-ajillo.jpg";
+import pupusasImg from "../img/menu/pupusas.jpg";
+import riguasImg from "../img/menu/riguas.jpg";
+import nuegadosImg from "../img/menu/nuegados.jpg";
+import peperechasImg from "../img/menu/peperechas.jpg";
+import semitaImg from "../img/menu/semita.jpg";
 
 function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
@@ -109,14 +114,18 @@ function createDishContainer() {
     addDishCard("Hamburguesas", "lunch", "$9.99", hamburguesaImg)
   );
   dishGrid.appendChild(
-    addDishCard("Pescado al ajillo", "lunch", "$9.99", pescadoAlAjillo)
+    addDishCard("Pescado al ajillo", "lunch", "$9.99", pescadoAlAjilloImg)
   );
-  dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60"));
-  dishGrid.appendChild(addDishCard("Riguas", "dinner", "$9.99"));
-  dishGrid.appendChild(addDishCard("Nuegados", "desserts", "$3.65"));
-  dishGrid.appendChild(addDishCard("Peperecha", "desserts", "$1.15"));
-  dishGrid.appendChild(addDishCard("Semita", "desserts", "$2.67"));
-  dishGrid.appendChild(addDishCard("Salpor", "desserts", "$1.98"));
+  dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60", pupusasImg));
+  dishGrid.appendChild(addDishCard("Riguas", "dinner", "$9.99", riguasImg));
+  dishGrid.appendChild(
+    addDishCard("Nuegados", "desserts", "$3.65", nuegadosImg)
+  );
+  dishGrid.appendChild(
+    addDishCard("Peperecha", "desserts", "$1.15", peperechasImg)
+  );
+  dishGrid.appendChild(addDishCard("Semita", "desserts", "$2.67", semitaImg));
+  dishGrid.appendChild(addDishCard("Salpores", "desserts", "$1.98"));
   dishGrid.appendChild(addDishCard("Viejitas", "desserts", "$1.10"));
   dishGrid.appendChild(addDishCard("Café", "drinks", "$0.75"));
   dishGrid.appendChild(addDishCard("Chocolate", "drinks", "$0.80"));
