@@ -415,7 +415,9 @@ header {
 .dish-card .dish-image {
   background-color: var(--secondary);
   height: 200px;
+  width: 100%;
   border-radius: 16px 16px 0 0;
+  object-fit: cover;
 }
 
 .dish-card .info {
