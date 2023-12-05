@@ -1,10 +1,13 @@
-function addDishCard(title, category, price) {
+import huevosConFrijolesImg from "../img/menu/huevos-con-frijoles.jpg";
+
+function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
   card.className = "dish-card";
   card.dataset.category = category;
 
-  const image = document.createElement("div");
-  image.className = "dish-image";
+  const cardImage = new Image();
+  cardImage.src = image;
+  cardImage.className = "dish-image";
 
   const infoContainer = document.createElement("div");
   infoContainer.className = "info";
@@ -25,7 +28,7 @@ function addDishCard(title, category, price) {
   infoContainer.appendChild(cardPrice);
   infoContainer.appendChild(addCartButton);
 
-  card.appendChild(image);
+  card.appendChild(cardImage);
   card.appendChild(infoContainer);
 
   return card;
@@ -67,11 +70,14 @@ function createDishContainer() {
 
   // Replace this to selected menu tab
   dishGrid.appendChild(
-    addDishCard("Huevos con frijoles", "breakfast", "$9.99")
+    addDishCard(
+      "Huevos con frijoles",
+      "breakfast",
+      "$9.99",
+      huevosConFrijolesImg
+    )
   );
-  dishGrid.appendChild(
-    addDishCard("Platanos salcochados", "breakfast", "$4.30")
-  );
+  dishGrid.appendChild(addDishCard("Platanos fritos", "breakfast", "$4.30"));
   dishGrid.appendChild(addDishCard("Huevos rancheros", "breakfast", "$4.39"));
   dishGrid.appendChild(addDishCard("Casamiento", "breakfast", "$6.59"));
   dishGrid.appendChild(addDishCard("Sopa de pollo", "lunch", "$10.99"));
