@@ -6,6 +6,8 @@ import sopaDePolloImg from "../img/menu/sopa-de-pollo.jpg";
 import carneALaPlanchaImg from "../img/menu/carne-a-la-plancha.jpg";
 import lasagnaImg from "../img/menu/lasagna.jpg";
 import lonjaEmpanizadaImg from "../img/menu/lonja-empanizada.jpg";
+import hamburguesaImg from "../img/menu/hamburguesa.jpg";
+import pescadoAlAjillo from "../img/menu/pescado-al-ajillo.jpg";
 
 function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
@@ -103,8 +105,12 @@ function createDishContainer() {
   dishGrid.appendChild(
     addDishCard("Lonja empanizada", "lunch", "$9.99", lonjaEmpanizadaImg)
   );
-  dishGrid.appendChild(addDishCard("Hamburguesas", "lunch", "$9.99"));
-  dishGrid.appendChild(addDishCard("Pescado al ajillo", "lunch", "$9.99"));
+  dishGrid.appendChild(
+    addDishCard("Hamburguesas", "lunch", "$9.99", hamburguesaImg)
+  );
+  dishGrid.appendChild(
+    addDishCard("Pescado al ajillo", "lunch", "$9.99", pescadoAlAjillo)
+  );
   dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60"));
   dishGrid.appendChild(addDishCard("Riguas", "dinner", "$9.99"));
   dishGrid.appendChild(addDishCard("Nuegados", "desserts", "$3.65"));
