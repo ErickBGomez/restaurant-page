@@ -2,6 +2,10 @@ import huevosConFrijolesImg from "../img/menu/huevos-con-frijoles.jpg";
 import platanosFritosImg from "../img/menu/platanos-fritos.jpg";
 import huevosRancherosImg from "../img/menu/huevos-rancheros.jpg";
 import casamientoImg from "../img/menu/casamiento.jpg";
+import sopaDePolloImg from "../img/menu/sopa-de-pollo.jpg";
+import carneALaPlanchaImg from "../img/menu/carne-a-la-plancha.jpg";
+import lasagnaImg from "../img/menu/lasagna.jpg";
+import lonjaEmpanizadaImg from "../img/menu/lonja-empanizada.jpg";
 
 function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
@@ -89,10 +93,16 @@ function createDishContainer() {
   dishGrid.appendChild(
     addDishCard("Casamiento", "breakfast", "$6.59", casamientoImg)
   );
-  dishGrid.appendChild(addDishCard("Sopa de pollo", "lunch", "$10.99"));
-  dishGrid.appendChild(addDishCard("Carne a la plancha", "lunch", "$12.50"));
-  dishGrid.appendChild(addDishCard("Lasaña", "lunch", "$8.50"));
-  dishGrid.appendChild(addDishCard("Lonja empanizada", "lunch", "$9.99"));
+  dishGrid.appendChild(
+    addDishCard("Sopa de pollo", "lunch", "$10.99", sopaDePolloImg)
+  );
+  dishGrid.appendChild(
+    addDishCard("Carne a la plancha", "lunch", "$12.50", carneALaPlanchaImg)
+  );
+  dishGrid.appendChild(addDishCard("Lasaña", "lunch", "$8.50", lasagnaImg));
+  dishGrid.appendChild(
+    addDishCard("Lonja empanizada", "lunch", "$9.99", lonjaEmpanizadaImg)
+  );
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Dish title", "lunch", "$9.99"));
   dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60"));
