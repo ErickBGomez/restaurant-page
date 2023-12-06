@@ -10,6 +10,7 @@ import hamburguesaImg from "../img/menu/hamburguesa.jpg";
 import pescadoAlAjilloImg from "../img/menu/pescado-al-ajillo.jpg";
 import pupusasImg from "../img/menu/pupusas.jpg";
 import riguasImg from "../img/menu/riguas.jpg";
+import tamalesImg from "../img/menu/tamales.jpg";
 import nuegadosImg from "../img/menu/nuegados.jpg";
 import peperechasImg from "../img/menu/peperechas.jpg";
 import semitaImg from "../img/menu/semita.jpg";
@@ -124,7 +125,7 @@ function createDishContainer() {
   );
   dishGrid.appendChild(addDishCard("Pupusas", "dinner", "$0.60", pupusasImg));
   dishGrid.appendChild(addDishCard("Riguas", "dinner", "$2.99", riguasImg));
-  dishGrid.appendChild(addDishCard("Tamales", "dinner", "$3.59"));
+  dishGrid.appendChild(addDishCard("Tamales", "dinner", "$3.59", tamalesImg));
   dishGrid.appendChild(
     addDishCard("Nuegados", "desserts", "$3.65", nuegadosImg)
   );
