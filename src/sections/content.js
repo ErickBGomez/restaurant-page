@@ -8,7 +8,7 @@ export default function renderContent() {
 
   document.body.appendChild(content);
 
-  changeContent("menu");
+  changeContent("home");
 
   tabsEvent();
 }

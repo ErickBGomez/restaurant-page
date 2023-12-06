@@ -108,6 +108,7 @@ function createDishSummary() {
 
   for (let i = 0; i < 9; i++) {
     const galleryElement = document.createElement("div");
+    galleryElement.classList = "dish-img";
     gallery.appendChild(galleryElement);
   }
 
