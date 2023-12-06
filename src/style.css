@@ -289,20 +289,22 @@ header {
 .dish-gallery-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 250px));
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, 175px);
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
 
-.dish-gallery-container > div {
+.gallery-element {
   background-color: var(--secondary);
-  aspect-ratio: 4/3;
   cursor: pointer;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 4/3;
   transition: 150ms;
 }
 
-.dish-gallery-container > div:hover {
+.gallery-element:hover {
   filter: brightness(1.3);
   transition: 150ms;
 }

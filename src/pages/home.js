@@ -2,6 +2,16 @@ import feature1Svg from "../img/home/feature1.svg";
 import feature2Svg from "../img/home/feature2.svg";
 import feature3Svg from "../img/home/feature3.svg";
 import aboutUsSummaryPng from "../img/home/about-us-summary.png";
+// Dish images
+import sopaDePolloImg from "../img/menu/sopa-de-pollo.jpg";
+import lasagnaImg from "../img/menu/lasagna.jpg";
+import horchata from "../img/menu/horchata.jpg";
+import lonjaEmpanizadaImg from "../img/menu/lonja-empanizada.jpg";
+import huevosRancherosImg from "../img/menu/huevos-rancheros.jpg";
+import pupusasImg from "../img/menu/pupusas.jpg";
+import chocolateImg from "../img/menu/chocolate.jpg";
+import pescadoAlAjilloImg from "../img/menu/pescado-al-ajillo.jpg";
+import carneALaPlanchaImg from "../img/menu/carne-a-la-plancha.jpg";
 
 function createHero() {
   const container = document.createElement("div");
@@ -87,6 +97,14 @@ function createFeatures() {
   return container;
 }
 
+function addDishSummaryContent(image) {
+  const galleryElement = new Image();
+  galleryElement.src = image;
+  galleryElement.classList = "gallery-element";
+
+  return galleryElement;
+}
+
 function createDishSummary() {
   const container = document.createElement("div");
   container.className = "dish-summary-container";
@@ -107,9 +125,7 @@ function createDishSummary() {
   gallery.className = "dish-gallery-container";
 
   for (let i = 0; i < 9; i++) {
-    const galleryElement = document.createElement("div");
-    galleryElement.classList = "dish-img";
-    gallery.appendChild(galleryElement);
+    gallery.appendChild(addDishSummaryContent(sopaDePolloImg));
   }
 
   const button = document.createElement("button");
