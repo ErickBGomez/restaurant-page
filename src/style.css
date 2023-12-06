@@ -567,9 +567,6 @@ header {
 }
 
 .contact-map {
-  background-color: var(--secondary);
-  width: 400px;
-  height: 250px;
   grid-column: 2 / 3;
   grid-row: 1 / -1;
   justify-self: end;
