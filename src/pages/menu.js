@@ -15,6 +15,10 @@ import peperechasImg from "../img/menu/peperechas.jpg";
 import semitaImg from "../img/menu/semita.jpg";
 import salporesImg from "../img/menu/salpores.jpg";
 import viejitasImg from "../img/menu/viejitas.jpg";
+import cafeImg from "../img/menu/cafe.jpg";
+import chocolateImg from "../img/menu/chocolate.jpg";
+import horchataImg from "../img/menu/horchata.jpg";
+import sodaImg from "../img/menu/soda.jpg";
 
 function addDishCard(title, category, price, image) {
   const card = document.createElement("div");
@@ -133,11 +137,12 @@ function createDishContainer() {
   dishGrid.appendChild(
     addDishCard("Viejitas", "desserts", "$1.10", viejitasImg)
   );
-  dishGrid.appendChild(addDishCard("Café", "drinks", "$0.75"));
-  dishGrid.appendChild(addDishCard("Chocolate", "drinks", "$0.80"));
-  dishGrid.appendChild(addDishCard("Horchata", "drinks", "$1.00"));
-  dishGrid.appendChild(addDishCard("Cebada", "drinks", "$1.15"));
-  dishGrid.appendChild(addDishCard("Soda", "drinks", "$1.25"));
+  dishGrid.appendChild(addDishCard("Café", "drinks", "$0.75", cafeImg));
+  dishGrid.appendChild(
+    addDishCard("Chocolate", "drinks", "$0.80", chocolateImg)
+  );
+  dishGrid.appendChild(addDishCard("Horchata", "drinks", "$1.00", horchataImg));
+  dishGrid.appendChild(addDishCard("Soda", "drinks", "$1.25", sodaImg));
 
   container.appendChild(dishGrid);
 
