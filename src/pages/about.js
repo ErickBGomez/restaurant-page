@@ -74,6 +74,7 @@ function createContact() {
 
   const map = document.createElement("div");
   map.classList = "contact-map";
+  map.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.2011900486755!2d-89.21421542408206!3d13.706261386680909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63312cffdc0e23%3A0xfd208b3a87cfb4d9!2sMetrocentro%20San%20Salvador!5e0!3m2!1sen!2ssv!4v1701823342557!5m2!1sen!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
 
   grid.appendChild(infoContainer);
   grid.appendChild(delivery);
