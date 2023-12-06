@@ -124,9 +124,15 @@ function createDishSummary() {
   const gallery = document.createElement("div");
   gallery.className = "dish-gallery-container";
 
-  for (let i = 0; i < 9; i++) {
-    gallery.appendChild(addDishSummaryContent(sopaDePolloImg));
-  }
+  gallery.appendChild(addDishSummaryContent(sopaDePolloImg));
+  gallery.appendChild(addDishSummaryContent(lasagnaImg));
+  gallery.appendChild(addDishSummaryContent(horchata));
+  gallery.appendChild(addDishSummaryContent(lonjaEmpanizadaImg));
+  gallery.appendChild(addDishSummaryContent(huevosRancherosImg));
+  gallery.appendChild(addDishSummaryContent(pupusasImg));
+  gallery.appendChild(addDishSummaryContent(chocolateImg));
+  gallery.appendChild(addDishSummaryContent(pescadoAlAjilloImg));
+  gallery.appendChild(addDishSummaryContent(carneALaPlanchaImg));
 
   const button = document.createElement("button");
   button.textContent = "VIEW MORE";
