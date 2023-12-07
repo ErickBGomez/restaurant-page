@@ -171,7 +171,7 @@ function createAboutSummary() {
 
   const button = document.createElement("button");
   button.textContent = "LEARN MORE";
-  button.dataset.target = "menu";
+  button.dataset.target = "about";
 
   infoSection.appendChild(titles);
   infoSection.appendChild(description);
