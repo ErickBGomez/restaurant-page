@@ -33,6 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       favicon: "./src/img/favicon.png",
+      title: "Belén's Restaurant | Erick B. Gómez",
     }),
   ],
 };
