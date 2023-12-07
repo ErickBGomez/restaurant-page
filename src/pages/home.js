@@ -12,6 +12,8 @@ import pupusasImg from "../img/menu/pupusas.jpg";
 import chocolateImg from "../img/menu/chocolate.jpg";
 import pescadoAlAjilloImg from "../img/menu/pescado-al-ajillo.jpg";
 import carneALaPlanchaImg from "../img/menu/carne-a-la-plancha.jpg";
+// External functions
+import { changeContent } from "../sections/content";
 
 function createHero() {
   const container = document.createElement("div");
@@ -40,6 +42,7 @@ function createHero() {
 
   const button = document.createElement("button");
   button.textContent = "VIEW MENU";
+  button.dataset.target = "menu";
 
   container.appendChild(titles);
   container.append(button);
@@ -136,6 +139,7 @@ function createDishSummary() {
 
   const button = document.createElement("button");
   button.textContent = "VIEW MORE";
+  button.dataset.target = "menu";
 
   container.appendChild(titles);
   container.appendChild(gallery);
@@ -167,6 +171,7 @@ function createAboutSummary() {
 
   const button = document.createElement("button");
   button.textContent = "LEARN MORE";
+  button.dataset.target = "menu";
 
   infoSection.appendChild(titles);
   infoSection.appendChild(description);
@@ -229,5 +234,17 @@ export default function renderHome() {
   home.appendChild(createAboutSummary());
   home.appendChild(createNewsletter());
 
+  addButtonEvents(home);
+
   return home;
+}
+
+function addButtonEvents(home) {
+  const buttons = home.querySelectorAll("button[data-target]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) =>
+      changeContent(button.dataset.target)
+    );
+  });
 }

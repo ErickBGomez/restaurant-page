@@ -2,7 +2,7 @@ import renderHome from "../pages/home.js";
 import renderMenu from "../pages/menu.js";
 import renderAbout from "../pages/about.js";
 
-export default function renderContent() {
+export function renderContent() {
   const content = document.createElement("div");
   content.id = "content";
 
@@ -23,7 +23,7 @@ function tabsEvent() {
   }
 }
 
-function changeContent(newContent) {
+export function changeContent(newContent) {
   const content = document.querySelector("#content");
   const tabs = document.querySelectorAll(".tab");
   let callback;
