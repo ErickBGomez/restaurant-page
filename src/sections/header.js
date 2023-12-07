@@ -46,7 +46,7 @@ function createHeaderTabs() {
 function createLogo() {
   const headerLogo = document.createElement("div");
   headerLogo.className = "logo";
-  headerLogo.textContent = "Logo";
+  headerLogo.textContent = "Belén";
   return headerLogo;
 }
 

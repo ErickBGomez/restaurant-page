@@ -70,7 +70,7 @@ function createFooterInfo() {
 function createFooterLogo() {
   const footerLogo = document.createElement("div");
   footerLogo.className = "logo footer-logo";
-  footerLogo.textContent = "Logo";
+  footerLogo.textContent = "Belén";
 
   return footerLogo;
 }

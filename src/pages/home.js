@@ -24,7 +24,7 @@ function createHero() {
   title.textContent = "Welcome to ";
   const restaurantSpan = document.createElement("span");
   restaurantSpan.className = "hero-restaurant";
-  restaurantSpan.textContent = "TITLE RESTAURANT";
+  restaurantSpan.textContent = "BELÉN'S RESTAURANT";
   title.appendChild(restaurantSpan);
 
   const subtitle = document.createElement("h1");
