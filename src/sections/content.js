@@ -46,4 +46,6 @@ export function changeContent(newContent) {
   }
 
   content.appendChild(callback());
+
+  window.scrollTo(0, 0);
 }
