@@ -7,10 +7,12 @@ function createFooterInfo() {
   const policiesTitle = document.createElement("h4");
   policiesTitle.textContent = "POLICIES";
 
-  const policiesText1 = document.createElement("p");
+  const policiesText1 = document.createElement("a");
   policiesText1.textContent = "Terms Of Use";
-  const policiesText2 = document.createElement("p");
+  policiesText1.href = "#";
+  const policiesText2 = document.createElement("a");
   policiesText2.textContent = "Privacy Policy";
+  policiesText2.href = "#";
 
   policiesContainer.appendChild(policiesTitle);
   policiesContainer.appendChild(policiesText1);
